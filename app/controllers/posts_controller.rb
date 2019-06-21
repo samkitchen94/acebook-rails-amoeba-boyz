@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def index
     @user = session[:user]
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   private
