@@ -6,5 +6,4 @@ class User < ApplicationRecord
   validates :password, presence: true, :length => { :in => 6..10 }
   validates :password_confirmation, presence: true, :length => { :in => 6..10 }
 
-
 end
