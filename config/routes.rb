@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   get 'sessions/new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -11,4 +12,13 @@ Rails.application.routes.draw do
 
   root :to => 'users#index'
 
+=======
+
+  devise_for :users
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :posts
+
+  root :to => 'home#index'
+>>>>>>> upstream/master
 end
