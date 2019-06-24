@@ -24,13 +24,13 @@ RSpec.feature "Layout", type: :feature do
       Hello, world #{date}")
   end
 
-  scenario "Can like a post" do
-    signup
-    click_link "New post"
-    fill_in "Message", with: "Hello, world"
-    click_button "Submit"
+  # scenario "Can like a post" do
+  #   signup
+  #   click_link "New post"
+  #   fill_in "Message", with: "Hello, world"
+  #   click_button "Submit"
     
-    expect(page).to have_button("That's sick")
+  #   expect(page).to have_button("That's sick")
 
-  end
+  # end
 end
