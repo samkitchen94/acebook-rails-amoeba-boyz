@@ -1,4 +1,5 @@
 require 'rails_helper'
+# require './app/controllers/posts_controller'
 
 RSpec.feature "Timeline", type: :feature do
   scenario "Can submit posts and view them" do
@@ -14,9 +15,10 @@ RSpec.feature "Timeline", type: :feature do
     click_link "New post"
     fill_in "Message", with: "Hello, world
     this is a second line"
+    date = Time.now.utc
     click_button "Submit"
     expect(page).to have_content("Hello, world
-      this is a second line")
+      this is a second line #{date}" )
   end
 
 end

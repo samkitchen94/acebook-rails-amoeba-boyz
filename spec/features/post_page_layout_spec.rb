@@ -14,12 +14,14 @@ RSpec.feature "Layout", type: :feature do
     click_link "New post"
     fill_in "Message", with: "third line"
     click_button "Submit"
-    
-    expect(page).to have_content("third line
 
-      second line
+    date = Time.now.utc
+    
+    expect(page).to have_content("third line #{date}
+
+      second line #{date}
       
-      Hello, world")
+      Hello, world #{date}")
   end
 
   scenario "Can like a post" do
